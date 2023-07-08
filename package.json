@@ -18,7 +18,8 @@
   "scripts": {
     "start": "react-app-rewired start",
     "test:easy": "jest **/*/App.easy.spec.tsx",
-    "test:hard": "jest **/*/App.hard.spec.tsx"
+    "test:hard": "jest **/*/App.hard.spec.tsx",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": [
