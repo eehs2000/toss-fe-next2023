@@ -1,0 +1,23 @@
+name: Test
+on: push
+jobs:
+  app_easy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: yarn install --frozen-lockfile
+      - run: yarn test src/test/App.easy.spec.tsx
+  inquiry_complete:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: yarn install --frozen-lockfile
+      - run: yarn test src/test/App.hard.spec.tsx
